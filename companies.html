@@ -9,12 +9,18 @@
 </head>
 
 <body>
-  <script>
-      if(localStorage.getItem("isLoggedIn")!=="true"){
-        alert("please Login ");
-        window.location.href="website login page.html"
-      }
-  </script>
+ <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    if (
+      localStorage.getItem("isLoggedIn") !== "true" ||
+      !localStorage.getItem("token")
+    ) {
+      alert("Please login first.");
+      window.location.href = "website login page.html";
+    }
+  });
+</script>
+
   <header class="header">
     <div class="navbar">
       <div class="logo-class">
@@ -37,30 +43,30 @@
   </header>
   <main>
     <div class="hero">
-        <h2>BookMyPlanner</h2><br>
-        <p>BookMyPlanner is an online event management platform 
-          designed to streamline the planning and booking process 
-          for various events such as weddings, birthday parties, 
-          corporate events, and social gatherings. It acts as a 
-          one-stop solution for clients to discover, compare, 
-          and book event-related services.
-        </p>
-          <br>
+      <h2>BookMyPlanner</h2><br>
+      <p>BookMyPlanner is an online event management platform
+        designed to streamline the planning and booking process
+        for various events such as weddings, birthday parties,
+        corporate events, and social gatherings. It acts as a
+        one-stop solution for clients to discover, compare,
+        and book event-related services.
+      </p>
+      <br>
 
-          <div class="address">
-            <h4>Address</h4>
-            <p>123, Scheme No. 78</p>
-            <p>Vijay Nagar, Indore</p>
-            <p>Madhya Pradesh, India</p>
-          </div>
+      <div class="address">
+        <h4>Address</h4>
+        <p>123, Scheme No. 78</p>
+        <p>Vijay Nagar, Indore</p>
+        <p>Madhya Pradesh, India</p>
+      </div>
 
     </div>
-      <div id="notFoundMessage">
-         Not Found
-      </div>
-      
+    <div id="notFoundMessage">
+      Not Found
+    </div>
+
     <div class="book">
-       <div class="companies">
+      <div class="companies">
         <div class="com">
           <h3>HappyNest Planners</h3>
 
@@ -70,13 +76,13 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>130, Blossom Avenue, Vijay Nagar, Indore, Madhya Pradesh</p>
-          <button class="btn "onclick="location.href='companies/Happynestdetail.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Happynestdetail.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
             📞 +91 1800 6573 677
           </a>
-          
+
         </div>
 
       </div>
@@ -90,7 +96,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>22, Coral Plaza, Bandra West, Mumbai, Maharashtra</p>
-          <button class="btn "onclick="location.href='companies/EventHub.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/EventHub.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -101,7 +107,7 @@
         </div>
       </div>
       <br><br>
-      
+
       <div class="companies">
         <div class="com">
           <h3>Event Planners</h3>
@@ -110,7 +116,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-          <button class="btn "onclick="location.href='companies/EventPlanner.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/EventPlanner.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -122,7 +128,7 @@
       </div>
       <br><br>
 
-       <div class="companies">
+      <div class="companies">
         <div class="com">
           <h3>Spirit of Celebration</h3>
 
@@ -131,7 +137,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-          <button class="btn "onclick="location.href='companies/Spirit.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Spirit.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -153,7 +159,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-         <button class="btn "onclick="location.href='companies/Color.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Color.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -176,7 +182,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-          <button class="btn "onclick="location.href='companies/Wedding.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Wedding.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -192,7 +198,7 @@
 
 
 
-      
+
       <div class="companies">
         <div class="com">
           <h3>FestiveAura Events</h3>
@@ -202,7 +208,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>203, Green Leaf Tower, Sector 62, Noida, Uttar Pradesh</p>
-          <button class="btn "onclick="location.href='companies/FestiveAura.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/FestiveAura.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -223,7 +229,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, TechTower Residency, Salt Lake City, Kolkata</p>
-          <button class="btn "onclick="location.href='companies/Memory.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Memory.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -245,7 +251,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-           <button class="btn "onclick="location.href='companies/Glitz.html'">Detail</button></a>         
+          <button class="btn " onclick="location.href='companies/Glitz.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -268,7 +274,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-         <button class="btn "onclick="location.href='companies/HappyEvent.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/HappyEvent.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -290,7 +296,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-          <button class="btn "onclick="location.href='companies/Party.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Party.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -313,7 +319,7 @@
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>Flat No. 4B, Skyline Residency, Salt Lake City, Kolkata</p>
-          <button class="btn "onclick="location.href='companies/Bold.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Bold.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -325,17 +331,17 @@
       </div>
       <br><br>
 
-      
+
       <div class="companies">
         <div class="com">
           <h3>Unique Management</h3>
 
-          
+
         </div>
         <div class="info">
           <div><img src="images/location.png" alt="location"></div>
           <p>18/2, Sapphire Arcade, MG Road, Bengaluru, Karnataka</p>
-          <button class="btn "onclick="location.href='companies/Unique.html'">Detail</button></a>
+          <button class="btn " onclick="location.href='companies/Unique.html'">Detail</button></a>
         </div>
         <div class="contact">
           <a href="tel:+919876543210" style="text-decoration:none; color:#d63384; font-weight:bold;">
@@ -344,12 +350,12 @@
 
 
         </div>
-       
+
       </div>
 
 
 
-      
+
     </div>
 
 
