@@ -113,27 +113,27 @@
         alert("Passwords and Confirm password do not match!");
         return;
       }
+      console.log(data)
 
       try {
-        fetch('http://localhost:6000').then((e) => console.log(e)).catch()
+        // fetch('http://localhost:5000').then((e) => console.log(e)).catch()
 
-        // const response = await fetch('http://localhost:6000/api/signup', {
-        //   method: 'POST',
+        const response = await fetch('http://localhost:5000/api/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
 
-        //   body: JSON.stringify({
-        //     name: data.name,
-        //     email: data.email,
-        //     password: data.passworddf
-        //   })
-        // });
+          body: JSON.stringify({ name: data.name, email: data.email, password: data.password })
+        });
 
-        // if (response.ok) {
-        //   alert("Signup successful!");
-        //   window.location.href = 'index.html';
-        // } else {
-        //   const errorData = await response.json();
-        //   alert(errorData.message || "Signup failed.");
-        // }
+        if (response.ok) {
+          alert("Signup successful!");
+          window.location.href = 'index.html';
+        } else {
+          const errorData = await response.json();
+          alert(errorData.message || "Signup failed.");
+        }
       } catch (err) {
         alert("Signup failed. Please try again.");
         console.error(err);
