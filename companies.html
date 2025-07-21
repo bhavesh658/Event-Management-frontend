@@ -9,6 +9,12 @@
 </head>
 
 <body>
+  <script>
+      if(localStorage.getItem("isLoggedIn")!=="true"){
+        alert("please Login ");
+        window.location.href="website login page.html"
+      }
+  </script>
   <header class="header">
     <div class="navbar">
       <div class="logo-class">
